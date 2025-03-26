@@ -1,0 +1,9 @@
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles/edit_cache.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles/rebuild_cache.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/allocator/CMakeFiles/allocator.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/allocator/CMakeFiles/AllocatorApp.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/allocator/CMakeFiles/edit_cache.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/allocator/CMakeFiles/rebuild_cache.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/test_proj/CMakeFiles/test_proj.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/test_proj/CMakeFiles/edit_cache.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/test_proj/CMakeFiles/rebuild_cache.dir

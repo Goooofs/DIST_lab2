@@ -158,6 +158,18 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/include/c++/14/limits /usr/include/c++/14/ctime \
- /usr/include/c++/14/bits/parse_numbers.h \
+ /usr/include/c++/14/bits/parse_numbers.h /usr/include/c++/14/cstring \
+ /usr/include/string.h /usr/include/strings.h /usr/include/c++/14/fstream \
+ /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/14/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc \
  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.h \
- /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/DataTypes.h
+ /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/DataTypes.h \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h

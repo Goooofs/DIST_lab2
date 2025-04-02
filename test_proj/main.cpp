@@ -3,10 +3,79 @@
 #include <new>
 #include <cstdlib>
 #include <ctime>
+#include <cstring>
+#include <cstddef>
+#include <fstream>
 #include "Allocator.h"
 
-constexpr size_t blockCount = 2'000'000'000;
+#if defined(_WIN32)
+#include <windows.h>
+#elif defined(__linux__)
+#include <unistd.h>
+#endif
+
+constexpr size_t blockCount = 1'000'000'000;
 constexpr size_t blockSize = sizeof(double);
+
+//MEMORY UTILS 
+size_t getAvailableRAM() {
+#if defined(_WIN32)
+    MEMORYSTATUSEX memInfo;
+    memInfo.dwLength = sizeof(memInfo);
+    if (GlobalMemoryStatusEx(&memInfo)) {
+        return static_cast<size_t>(memInfo.ullAvailPhys);
+    }
+    return 0;
+#elif defined(__linux__)
+    std::ifstream meminfo("/proc/meminfo");
+    std::string line;
+    while (std::getline(meminfo, line)) {
+        if (line.rfind("MemAvailable:", 0) == 0) {
+            size_t kb = std::stoull(line.substr(14));
+            return kb * 1024;
+        }
+    }
+    return 0;
+#else
+    return SIZE_MAX;
+#endif
+}
+
+size_t getProcessMemoryKB(const std::string& key) {
+#if defined(__linux__)
+    std::ifstream status("/proc/self/status");
+    std::string line;
+    while (std::getline(status, line)) {
+        if (line.rfind(key, 0) == 0) {
+            size_t kb = std::stoull(line.substr(key.size()));
+            return kb;
+        }
+    }
+#endif
+    return 0;
+}
+
+size_t getVmSize() {
+    return getProcessMemoryKB("VmSize:\t") * 1024;
+}
+
+bool willLikelyOOM(size_t upcomingBytes) {
+    size_t available = getAvailableRAM();
+    size_t current = getVmSize();
+    size_t total = current + upcomingBytes;
+    size_t threshold = available * 8 / 10;
+
+    // std::cout << "Available RAM: " << (available >> 20) << " MB" << std::endl;
+    // std::cout << "Current VmSize: " << (current >> 20) << " MB" << std::endl;
+    // std::cout << "Upcoming alloc: " << (upcomingBytes >> 20) << " MB" << std::endl;
+    // std::cout << "Safe threshold: " << (threshold >> 20) << " MB" << std::endl;
+
+    if (total > threshold) {
+        std::cerr << "OOM Risk — too much memory requested, skipping.\n";
+        return true;
+    }
+    return false;
+}
 
 class MyObject {
 public:
@@ -52,20 +121,14 @@ void printValues(MyObject* const* arr, size_t count) {
 void testHeapBlocksMode(size_t count) {
     std::cout << "\n=== HEAP_BLOCKS Mode ===" << std::endl;
 
-    size_t bytes = sizeof(MyObjectHeapBlocks*) * count;
-    std::cout << "Attempting to allocate " << (bytes >> 20) << " MB of pointer array\n";
-
-    if (bytes > 8ULL * 1024 * 1024 * 1024) { //8 ГБ лимит
-        std::cerr << "Too much memory requested — aborting before OOM\n";
-        return;
-    }
+    size_t required = sizeof(MyObjectHeapBlocks*) * count;
+    if (willLikelyOOM(required)) return;
 
     MyObjectHeapBlocks** arr = nullptr;
-
     try {
         arr = new MyObjectHeapBlocks*[count];
-    } catch (const std::bad_alloc&) {
-        std::cerr << "HEAP_BLOCKS: Failed to allocate pointer array\n";
+    } catch (...) {
+        std::cerr << "HEAP_BLOCKS: Allocation failed.\n";
         return;
     }
 
@@ -80,8 +143,7 @@ void testHeapBlocksMode(size_t count) {
         }
     }
     auto end = std::chrono::high_resolution_clock::now();
-    std::cout << "Allocation time: "
-              << std::chrono::duration<double, std::milli>(end - start).count() << " ms\n";
+    std::cout << "Allocation time: " << std::chrono::duration<double, std::milli>(end - start).count() << " ms\n";
 
     // printValues(reinterpret_cast<MyObject* const*>(arr), count);
 
@@ -96,16 +158,10 @@ void testHeapBlocksMode(size_t count) {
 void testHeapPoolMode(size_t count) {
     std::cout << "\n=== HEAP_POOL Mode ===" << std::endl;
 
-    size_t bytes = sizeof(MyObjectHeapBlocks*) * count;
-    std::cout << "Attempting to allocate " << (bytes >> 20) << " MB of pointer array\n";
-
-    if (bytes > 8ULL * 1024 * 1024 * 1024) { //8 ГБ лимит
-        std::cerr << "Too much memory requested — aborting before OOM\n";
-        return;
-    }
+    size_t required = sizeof(MyObjectHeapPool*) * count;
+    if (willLikelyOOM(required)) return;
 
     MyObjectHeapPool** arr = nullptr;
-
     try {
         arr = new MyObjectHeapPool*[count];
     } catch (const std::bad_alloc&) {
@@ -139,16 +195,11 @@ void testHeapPoolMode(size_t count) {
 void testStaticPoolMode(size_t count) {
     std::cout << "\n=== STATIC_POOL Mode ===" << std::endl;
 
-    size_t bytes = sizeof(MyObjectHeapBlocks*) * count;
-    std::cout << "Attempting to allocate " << (bytes >> 20) << " MB of pointer array\n";
-
-    if (bytes > 8ULL * 1024 * 1024 * 1024) { //8 ГБ лимит
-        std::cerr << "Too much memory requested — aborting before OOM\n";
-        return;
-    }
+    size_t required = sizeof(MyObjectStaticPool*) * count;
+    if (willLikelyOOM(required)) return;
 
     if (!staticPoolMemory) {
-        std::cerr << "STATIC_POOL: staticPoolMemory not allocated!\n";
+        std::cerr << "STATIC_POOL: Memory not allocated.\n";
         return;
     }
 

@@ -18,6 +18,7 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
   /usr/include/c++/14/bits/char_traits.h \
   /usr/include/c++/14/bits/charconv.h \
   /usr/include/c++/14/bits/chrono.h \
+  /usr/include/c++/14/bits/codecvt.h \
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
   /usr/include/c++/14/bits/cxxabi_forced.h \
@@ -25,6 +26,7 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
   /usr/include/c++/14/bits/exception.h \
   /usr/include/c++/14/bits/exception_defines.h \
   /usr/include/c++/14/bits/exception_ptr.h \
+  /usr/include/c++/14/bits/fstream.tcc \
   /usr/include/c++/14/bits/functexcept.h \
   /usr/include/c++/14/bits/functional_hash.h \
   /usr/include/c++/14/bits/hash_bytes.h \
@@ -75,6 +77,7 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
   /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
+  /usr/include/c++/14/cstring \
   /usr/include/c++/14/ctime \
   /usr/include/c++/14/cwchar \
   /usr/include/c++/14/cwctype \
@@ -86,6 +89,7 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
   /usr/include/c++/14/ext/numeric_traits.h \
   /usr/include/c++/14/ext/string_conversions.h \
   /usr/include/c++/14/ext/type_traits.h \
+  /usr/include/c++/14/fstream \
   /usr/include/c++/14/initializer_list \
   /usr/include/c++/14/ios \
   /usr/include/c++/14/iosfwd \
@@ -109,6 +113,7 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
@@ -117,20 +122,28 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/time.h \
+  /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -176,14 +189,17 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_base.h \
@@ -220,13 +236,17 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_base.h:
 
-/usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h:
-
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h:
+
+/usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h:
+
+/usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h:
+
+/usr/include/x86_64-linux-gnu/c++/14/bits/basic_file.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h:
 
@@ -286,10 +306,6 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
@@ -302,9 +318,29 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
@@ -315,8 +351,6 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 /usr/include/c++/14/bits/refwrap.h:
 
 /usr/include/c++/14/exception:
-
-/usr/include/c++/14/bits/streambuf_iterator.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h:
 
@@ -330,15 +364,9 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/c++/14/bits/memoryfwd.h:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
 /usr/include/c++/14/bits/postypes.h:
 
 /usr/include/c++/14/bits/uses_allocator.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/c++/14/bits/stl_construct.h:
 
@@ -356,7 +384,23 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/c++/14/bits/istream.tcc:
 
+/usr/include/c++/14/bits/codecvt.h:
+
 /usr/include/wchar.h:
+
+/usr/include/c++/14/bits/ios_base.h:
+
+/usr/include/c++/14/bits/move.h:
+
+/usr/include/c++/14/bits/locale_classes.tcc:
+
+/usr/include/c++/14/bits/utility.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/c++/14/bits/invoke.h:
+
+/usr/include/stdc-predef.h:
 
 /usr/include/c++/14/bits/stl_function.h:
 
@@ -402,17 +446,11 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/c++/14/bits/hash_bytes.h:
 
+/usr/include/c++/14/fstream:
+
 /usr/include/c++/14/bits/allocator.h:
 
 /usr/include/c++/14/backward/binders.h:
-
-/usr/include/c++/14/bits/locale_classes.tcc:
-
-/usr/include/c++/14/bits/move.h:
-
-/usr/include/c++/14/bits/utility.h:
-
-/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.h:
 
 /usr/include/c++/14/bit:
 
@@ -424,11 +462,11 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/features.h:
 
-/usr/include/c++/14/bits/ios_base.h:
-
 /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/DataTypes.h:
 
 /usr/include/c++/14/cwctype:
+
+/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -454,12 +492,6 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/c++/14/concepts:
 
-/usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h:
-
-/usr/include/c++/14/tuple:
-
-/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/test_proj/main.cpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/14/bits/stl_iterator_base_funcs.h:
@@ -476,13 +508,25 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/c++/14/ext/atomicity.h:
 
+/usr/include/c++/14/bits/fstream.tcc:
+
+/usr/include/c++/14/typeinfo:
+
+/usr/include/c++/14/bits/cxxabi_forced.h:
+
+/usr/include/stdint.h:
+
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/c++/14/bits/exception_defines.h:
 
-/usr/include/c++/14/bits/invoke.h:
+/usr/include/c++/14/bits/streambuf_iterator.h:
 
-/usr/include/stdc-predef.h:
+/usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h:
+
+/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/test_proj/main.cpp:
+
+/usr/include/c++/14/tuple:
 
 /usr/include/c++/14/bits/uses_allocator_args.h:
 
@@ -499,6 +543,8 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 /usr/include/c++/14/cstddef:
 
 /usr/include/c++/14/cstdio:
+
+/usr/include/c++/14/iosfwd:
 
 /usr/include/c++/14/ctime:
 
@@ -526,19 +572,13 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/linux/errno.h:
 
-/usr/include/c++/14/iosfwd:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/include/c++/14/bits/requires_hosted.h:
-
-/usr/include/c++/14/iostream:
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
 /usr/include/c++/14/limits:
 
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
 /usr/include/c++/14/new:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
 
 /usr/include/c++/14/clocale:
 
@@ -546,11 +586,27 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/c++/14/ostream:
 
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/c++/14/bits/std_abs.h:
+
+/usr/include/c++/14/pstl/pstl_config.h:
+
 /usr/include/c++/14/bits/charconv.h:
 
 /usr/include/c++/14/cwchar:
 
+/usr/include/c++/14/cstring:
+
 /usr/include/c++/14/stdexcept:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/unistd.h:
 
 /usr/include/c++/14/bits/cxxabi_init_exception.h:
 
@@ -562,12 +618,6 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/c++/14/system_error:
 
-/usr/include/c++/14/typeinfo:
-
-/usr/include/c++/14/bits/cxxabi_forced.h:
-
-/usr/include/stdint.h:
-
 /usr/include/ctype.h:
 
 /usr/include/c++/14/bits/localefwd.h:
@@ -575,6 +625,8 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 /usr/include/endian.h:
 
 /usr/include/features-time64.h:
+
+/usr/include/linux/close_range.h:
 
 /usr/include/c++/14/bits/functexcept.h:
 
@@ -586,22 +638,18 @@ test_proj/CMakeFiles/test_proj.dir/main.cpp.o: /home/goof/TSU/Development\ of\ i
 
 /usr/include/stdlib.h:
 
-/usr/include/time.h:
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/c++/14/bits/requires_hosted.h:
+
+/usr/include/c++/14/iostream:
+
+/usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
 /usr/include/wctype.h:
 
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/c++/14/bits/std_abs.h:
-
-/usr/include/c++/14/pstl/pstl_config.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+/usr/include/time.h:

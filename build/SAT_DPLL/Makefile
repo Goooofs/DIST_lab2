@@ -182,6 +182,30 @@ BBV.cpp.s:
 	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build" && $(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/BBV.cpp.s
 .PHONY : BBV.cpp.s
 
+__/allocator/Allocator.o: __/allocator/Allocator.cpp.o
+.PHONY : __/allocator/Allocator.o
+
+# target to build an object file
+__/allocator/Allocator.cpp.o:
+	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build" && $(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o
+.PHONY : __/allocator/Allocator.cpp.o
+
+__/allocator/Allocator.i: __/allocator/Allocator.cpp.i
+.PHONY : __/allocator/Allocator.i
+
+# target to preprocess a source file
+__/allocator/Allocator.cpp.i:
+	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build" && $(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.i
+.PHONY : __/allocator/Allocator.cpp.i
+
+__/allocator/Allocator.s: __/allocator/Allocator.cpp.s
+.PHONY : __/allocator/Allocator.s
+
+# target to generate assembly for a file
+__/allocator/Allocator.cpp.s:
+	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build" && $(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.s
+.PHONY : __/allocator/Allocator.cpp.s
+
 boolequation.o: boolequation.cpp.o
 .PHONY : boolequation.o
 
@@ -292,6 +316,9 @@ help:
 	@echo "... BBV.o"
 	@echo "... BBV.i"
 	@echo "... BBV.s"
+	@echo "... __/allocator/Allocator.o"
+	@echo "... __/allocator/Allocator.i"
+	@echo "... __/allocator/Allocator.s"
 	@echo "... boolequation.o"
 	@echo "... boolequation.i"
 	@echo "... boolequation.s"

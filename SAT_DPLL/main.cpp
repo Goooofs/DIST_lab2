@@ -10,20 +10,24 @@
 #include "boolinterval.h"
 #include "boolequation.h"
 #include "BBV.h"
-
+#include "Allocator.h"
 
 int main(int argc, char *argv[])
 {
+    const size_t kBoolIntervalSize = 64;
+    const size_t kBoolEquationSize = 256;
+    const size_t kNodeBoolTreeSize = 80;
+
+    Allocator allocBoolInterval(kBoolIntervalSize, 200);
+    Allocator allocBoolEquation(kBoolEquationSize, 100);
+    Allocator allocNodeBoolTree(kNodeBoolTreeSize, 100);
+    Allocator allocCNF(1024, 1);
+
 	QStringList full_file_list;
 	QList<QStringList> Elements;
 	std::string filepath;
 	QStringList inputs;
-	//std::cout << "Input file path...\n";
-	//std::cin >> filepath;
-	// Hardcode input
-	//	filepath = "sat_ex_2.pla";
-	//filepath = "Sat_ex11_3.pla";
-	filepath = "/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/SatExamples/Sat_ex30_3.pla";
+	filepath = "/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/SatExamples/Sat_ex14_3.pla";
 	QFile file(QString::fromUtf8(filepath.c_str()));
 
 	//считываем весь файл
@@ -32,8 +36,22 @@ int main(int argc, char *argv[])
 			full_file_list << file.readLine().replace("\r\n", "");
 		}
 
-		int cnfSize = full_file_list.length();
-		BoolInterval **CNF = new BoolInterval*[cnfSize];
+		// int cnfSize = -1;
+        int cnfSize = full_file_list.length();
+        BoolInterval** CNF = nullptr;
+        try{
+            size_t requestSize = sizeof(BoolInterval*) * cnfSize;
+            std::cout << requestSize << std::endl;
+
+            if (requestSize > 1024) throw std::runtime_error("CNF array too large for allocator");
+
+            void* memCNF = allocCNF.Allocate(requestSize);
+            CNF = static_cast<BoolInterval**>(memCNF);
+        } catch (const std::exception& e) {
+            std::cerr << "error while allocating CNF: " << e.what() << std::endl;
+            return 1;
+        }
+
 		int rangInterval = -1; // error
 
 		if (cnfSize) {
@@ -42,7 +60,15 @@ int main(int argc, char *argv[])
 
 		for (int i = 0; i < cnfSize; i++) { // Заполняем массив
 			QString strv = full_file_list[i];
-			CNF[i] = new BoolInterval(strv.toUtf8().trimmed().data());
+            
+            try {
+                if (sizeof(BoolInterval) > kBoolIntervalSize) throw std::runtime_error("BoolInterval size too large for allocator");
+                void* mem = allocBoolInterval.Allocate(sizeof(BoolInterval));
+                CNF[i] = new (mem) BoolInterval(strv.toUtf8().trimmed().data());
+            } catch (const std::exception& e) {
+                std::cerr << "error while allocating BoolInterval" << i << ": " << e.what() << std::endl;
+                return 1;
+            }
 		}
 
 		QString rootvec = "";
@@ -64,9 +90,25 @@ int main(int argc, char *argv[])
 		BBV dnc(d.data());
 
 		// Создаем пустой корень уравнения;
-		BoolInterval *root = new BoolInterval(vec, dnc);
+        BoolInterval* root = nullptr;
+        try {
+            if (sizeof(BoolInterval) > kBoolIntervalSize) throw std::runtime_error("Root BoolInterval size too large for allocator");
+            void* memRoot = allocBoolInterval.Allocate(sizeof(BoolInterval));
+            root = new (memRoot) BoolInterval(vec, dnc);
+        } catch (const std::exception& e) {
+            std::cerr << "error while allocating Root BoolInterval: " << e.what() << std::endl;
+            return 1;
+        }
 
-		BoolEquation *boolequation = new BoolEquation(CNF, root, cnfSize, cnfSize, vec);
+        BoolEquation* boolequation = nullptr;
+        try {
+            if (sizeof(BoolEquation) > kBoolEquationSize) throw std::runtime_error("BoolEquation size too large for allocator");
+            void* mem = allocBoolEquation.Allocate(sizeof(BoolEquation));
+            boolequation = new (mem) BoolEquation(CNF, root, cnfSize, cnfSize, vec);
+        } catch (const std::exception& e) {
+            std::cerr << "error while allocating BoolEquation: " << e.what() << std::endl;
+            return 1;
+        }
 
 		// Алгоритм поиска корня. Работаем всегда с верхушкой стека.
 		// Шаг 1. Правила выполняются? Нет - Ветвление Шаг 5. Да - Упрощаем Шаг 2.
@@ -85,7 +127,17 @@ int main(int argc, char *argv[])
 
 		bool rootIsFinded = false;
 		stack<NodeBoolTree *> BoolTree;
-		NodeBoolTree *startNode = new NodeBoolTree(boolequation);
+
+        NodeBoolTree* startNode = nullptr;
+        try {
+            if (sizeof(NodeBoolTree) > kNodeBoolTreeSize) throw std::runtime_error("NodeBoolTree size too large for allocator");
+            void* memNode = allocNodeBoolTree.Allocate(sizeof(NodeBoolTree));
+            startNode = new (memNode) NodeBoolTree(boolequation);
+        } catch (const std::exception& e) {
+            std::cerr << "error while allocating Start NodeBoolTree: " << e.what() << std::endl;
+            return 1;
+        }
+
 		BoolTree.push(startNode);
 
 		do {
@@ -133,14 +185,29 @@ int main(int argc, char *argv[])
 
 							int indexBranching = currentEquation->ChooseColForBranching();
 
-							BoolEquation *Equation0 = new BoolEquation(*currentEquation);
-							BoolEquation *Equation1 = new BoolEquation(*currentEquation);
+                            BoolEquation *Equation0 = nullptr, *Equation1 = nullptr;
+                            NodeBoolTree *Node0 = nullptr, *Node1 = nullptr;
 
-							Equation0->Simplify(indexBranching, '0');
-							Equation1->Simplify(indexBranching, '1');
+                            try {
+                                if (sizeof(BoolEquation) > kBoolEquationSize) throw std::runtime_error("Equation size too large for allocator");
+                                if (sizeof(NodeBoolTree) > kNodeBoolTreeSize) throw std::runtime_error("Node size too large for allocator");
 
-							NodeBoolTree *Node0 = new NodeBoolTree(Equation0);
-							NodeBoolTree *Node1 = new NodeBoolTree(Equation1);
+                                void* memEq0 = allocBoolEquation.Allocate(sizeof(BoolEquation));
+                                Equation0 = new (memEq0) BoolEquation(*currentEquation);
+                                void* memEq1 = allocBoolEquation.Allocate(sizeof(BoolEquation));
+                                Equation1 = new (memEq1) BoolEquation(*currentEquation);
+
+                                Equation0->Simplify(indexBranching, '0');
+                                Equation1->Simplify(indexBranching, '1');
+
+                                void* memNode0 = allocNodeBoolTree.Allocate(sizeof(NodeBoolTree));
+                                Node0 = new (memNode0) NodeBoolTree(Equation0);
+                                void* memNode1 = allocNodeBoolTree.Allocate(sizeof(NodeBoolTree));
+                                Node1 = new (memNode1) NodeBoolTree(Equation1);
+                            } catch (const std::exception& e) {
+                                std::cerr << "error while allocating Branch: " << e.what() << std::endl;
+                                return 1;
+                            }
 
 							currentNode->lt = Node0;
 							currentNode->rt = Node1;

@@ -7,6 +7,8 @@ sat_dpll_autogen/timestamp: \
 	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.cpp \
 	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.h \
 	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/main.cpp \
+	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.cpp \
+	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.h \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake \

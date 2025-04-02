@@ -261,4 +261,6 @@ SAT_DPLL/CMakeFiles/sat_dpll.dir/main.cpp.o: \
  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/NodeBoolTree.h \
  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.h \
  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.h \
- /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.h
+ /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.h \
+ /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.h \
+ /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/DataTypes.h

@@ -127,7 +127,7 @@ void testHeapBlocksMode(size_t count) {
     MyObjectHeapBlocks** arr = nullptr;
     try {
         arr = new MyObjectHeapBlocks*[count];
-    } catch (...) {
+    } catch (const std::bad_alloc&) {
         std::cerr << "HEAP_BLOCKS: Allocation failed.\n";
         return;
     }

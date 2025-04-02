@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DQT_CORE_LIB -DQT_NO_DEBUG
 
-CXX_INCLUDES = -I"/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL/sat_dpll_autogen/include" -I"/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL" -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+CXX_INCLUDES = -I"/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL/sat_dpll_autogen/include" -I"/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL" -I"/home/goof/TSU/Development of information security tools/DIST_lab2/allocator" -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 
 CXX_FLAGS = -std=gnu++11 -fPIC
 

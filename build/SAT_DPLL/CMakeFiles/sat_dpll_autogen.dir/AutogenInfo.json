@@ -40,6 +40,12 @@
 			"Mu",
 			"EWIEGA46WW/moc_boolinterval.cpp",
 			null
+		],
+		[
+			"/home/goof/TSU/Development of information security tools/DIST_lab2/allocator/Allocator.h",
+			"Mu",
+			"WIF3FBSGEU/moc_Allocator.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -56,6 +62,7 @@
 	"MOC_INCLUDES" : 
 	[
 		"/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL",
+		"/home/goof/TSU/Development of information security tools/DIST_lab2/allocator",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
 		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
@@ -109,6 +116,11 @@
 		],
 		[
 			"/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/main.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/goof/TSU/Development of information security tools/DIST_lab2/allocator/Allocator.cpp",
 			"Mu",
 			null
 		]

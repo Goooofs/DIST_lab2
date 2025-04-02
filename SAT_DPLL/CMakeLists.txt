@@ -15,6 +15,8 @@ add_executable(sat_dpll
     BBV.cpp
     boolinterval.cpp
     boolequation.cpp
+
+    ${CMAKE_SOURCE_DIR}/allocator/Allocator.cpp
 )
 
 # Подключаем нужные include-пути и линкуем QtCore
@@ -24,3 +26,4 @@ target_link_libraries(sat_dpll
 )
 
 target_include_directories(sat_dpll PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_SOURCE_DIR}/allocator)

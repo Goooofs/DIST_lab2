@@ -15,6 +15,7 @@ add_executable(sat_dpll
     BBV.cpp
     boolinterval.cpp
     boolequation.cpp
+    MinOccStrategy.cpp
 
     ${CMAKE_SOURCE_DIR}/allocator/Allocator.cpp
 )

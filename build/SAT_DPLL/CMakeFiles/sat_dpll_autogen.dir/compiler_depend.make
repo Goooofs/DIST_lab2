@@ -610,6 +610,114 @@ SAT_DPLL/sat_dpll_autogen/timestamp: /home/goof/TSU/Development\ of\ information
   /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
   /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
   /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake \
+  /usr/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/CMakeLists.txt \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/main.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.h \
+  /usr/bin/cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake \
+  /usr/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/CMakeLists.txt \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/main.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.h \
+  /usr/bin/cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake \
+  /usr/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/CMakeLists.txt \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/main.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.h \
+  /usr/bin/cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake \
+  /usr/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/CMakeLists.txt \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/main.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.h \
+  /usr/bin/cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake \
+  /usr/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/CMakeLists.txt \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.h \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/main.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.cpp \
+  /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.h \
+  /usr/bin/cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake \
   /usr/share/cmake-3.30/Modules/CMakeParseArguments.cmake
 
 
@@ -626,6 +734,8 @@ SAT_DPLL/sat_dpll_autogen/timestamp: /home/goof/TSU/Development\ of\ information
 /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.cpp:
 
 /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.cpp:
+
+/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp:
 
 /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.h:
 
@@ -648,6 +758,8 @@ SAT_DPLL/sat_dpll_autogen/timestamp: /home/goof/TSU/Development\ of\ information
 /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/main.cpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake:
+
+/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake:
 

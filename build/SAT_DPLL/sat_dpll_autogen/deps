@@ -2,6 +2,8 @@ sat_dpll_autogen/timestamp: \
 	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.cpp \
 	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/BBV.h \
 	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/CMakeLists.txt \
+	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp \
+	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.h \
 	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.cpp \
 	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolequation.h \
 	/home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/boolinterval.cpp \

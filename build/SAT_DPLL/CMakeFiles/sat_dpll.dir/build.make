@@ -145,10 +145,24 @@ SAT_DPLL/CMakeFiles/sat_dpll.dir/boolequation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sat_dpll.dir/boolequation.cpp.s"
 	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/boolequation.cpp" -o CMakeFiles/sat_dpll.dir/boolequation.cpp.s
 
+SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o: SAT_DPLL/CMakeFiles/sat_dpll.dir/flags.make
+SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o: /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp
+SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o: SAT_DPLL/CMakeFiles/sat_dpll.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o"
+	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o -MF CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o.d -o CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o -c "/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp"
+
+SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.i"
+	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp" > CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.i
+
+SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.s"
+	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp" -o CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.s
+
 SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o: SAT_DPLL/CMakeFiles/sat_dpll.dir/flags.make
 SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o: /home/goof/TSU/Development\ of\ information\ security\ tools/DIST_lab2/allocator/Allocator.cpp
 SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o: SAT_DPLL/CMakeFiles/sat_dpll.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o"
 	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o -MF CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o.d -o CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o -c "/home/goof/TSU/Development of information security tools/DIST_lab2/allocator/Allocator.cpp"
 
 SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.i: cmake_force
@@ -166,6 +180,7 @@ sat_dpll_OBJECTS = \
 "CMakeFiles/sat_dpll.dir/BBV.cpp.o" \
 "CMakeFiles/sat_dpll.dir/boolinterval.cpp.o" \
 "CMakeFiles/sat_dpll.dir/boolequation.cpp.o" \
+"CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o" \
 "CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o"
 
 # External object files for target sat_dpll
@@ -176,11 +191,12 @@ SAT_DPLL/sat_dpll: SAT_DPLL/CMakeFiles/sat_dpll.dir/main.cpp.o
 SAT_DPLL/sat_dpll: SAT_DPLL/CMakeFiles/sat_dpll.dir/BBV.cpp.o
 SAT_DPLL/sat_dpll: SAT_DPLL/CMakeFiles/sat_dpll.dir/boolinterval.cpp.o
 SAT_DPLL/sat_dpll: SAT_DPLL/CMakeFiles/sat_dpll.dir/boolequation.cpp.o
+SAT_DPLL/sat_dpll: SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o
 SAT_DPLL/sat_dpll: SAT_DPLL/CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o
 SAT_DPLL/sat_dpll: SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make
 SAT_DPLL/sat_dpll: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.15
 SAT_DPLL/sat_dpll: SAT_DPLL/CMakeFiles/sat_dpll.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable sat_dpll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable sat_dpll"
 	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sat_dpll.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

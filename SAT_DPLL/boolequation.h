@@ -2,25 +2,45 @@
 #define BOOLEQUATION_H
 
 #include "boolinterval.h"
+#include "IBranchStrat.h"  // Подключаем интерфейс
 
 class BoolEquation
 {
 public:
+	BoolEquation(BoolInterval **cnf, BoolInterval *root, int cnfSize, int count, BBV mask, IBranchStrat* strategy = nullptr);
+  	BoolEquation(BoolEquation &equation, IBranchStrat* strategy = nullptr);
+
+	int CheckRules();
+	void Simplify(int ixCol, char value);
+
+
+	int ChooseColForBranching();  //вызовем стратегию
+
+	int getCnfSize() const {return cnfSize;}
+	int getCount() const {return count;}
+	BoolInterval** getCnf() const {return cnf;}
+	BoolInterval* getRoot() const {return root;}
+	BBV& getMask() {return mask;}
+	const BBV& getMask() const {return mask;}
+
+	void setBranchingStrategy(IBranchStrat* strategy) {
+		branchStrat = strategy;
+	}
+
+private:
 	BoolInterval **cnf;//множество интервалов
-	BoolInterval *root;//Корень уравнения
 	int cnfSize; // Размер КНФ
+	BoolInterval *root;//Корень уравнения
 	int count; //количество дизъюнкций
 	BBV mask; //маска для столбцов
-	BoolEquation(BoolInterval **cnf, BoolInterval *root, int cnfSize, int count, BBV mask);
-	BoolEquation(BoolEquation &equation);
-	int CheckRules();
+
 	bool Rule1Row1(BoolInterval *interval);
 	bool Rule2RowNull(BoolInterval *interval);
 	void Rule3ColNull(BBV vector);
 	bool Rule4Col0(BBV vector);
 	bool Rule5Col1(BBV vector);
-	void Simplify(int ixCol, char value);
-	int ChooseColForBranching();
+
+	IBranchStrat* branchStrat;
 };
 
 #endif // BOOLEQUATION_H

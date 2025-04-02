@@ -11,6 +11,9 @@
 #include "boolequation.h"
 #include "BBV.h"
 #include "Allocator.h"
+#include "MinOccStrategy.h"
+#include "MinOccStrategy.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -104,7 +107,8 @@ int main(int argc, char *argv[])
         try {
             if (sizeof(BoolEquation) > kBoolEquationSize) throw std::runtime_error("BoolEquation size too large for allocator");
             void* mem = allocBoolEquation.Allocate(sizeof(BoolEquation));
-            boolequation = new (mem) BoolEquation(CNF, root, cnfSize, cnfSize, vec);
+            IBranchStrat* strategy = new MinOccStrategy(); // добавил стратегию
+            boolequation = new (mem) BoolEquation(CNF, root, cnfSize, cnfSize, vec, strategy);
         } catch (const std::exception& e) {
             std::cerr << "error while allocating BoolEquation: " << e.what() << std::endl;
             return 1;
@@ -160,16 +164,16 @@ int main(int argc, char *argv[])
 						}
 
 						case 1: { // Правило выполнилось, корень найден или продолжаем упрощать.
-							if (currentEquation->count == 0 ||
-									currentEquation->mask.getWeight() ==
-									currentEquation->mask.getSize()) { // Если кончились строки или столбцы, корень найден.
+							if (currentEquation->getCount() == 0 ||
+									currentEquation->getMask().getWeight() ==
+									currentEquation->getMask().getSize()) { // Если кончились строки или столбцы, корень найден.
 								flag = false;
 								rootIsFinded =
 									true; // Полагаем, что корень найден, выполняем проверку корня
 
 								for (int i = 0; i < cnfSize; i++) {
 
-									if (!CNF[i]->isEqualComponent(*currentEquation->root)) {
+									if (!CNF[i]->isEqualComponent(*currentEquation->getRoot())) {
 										rootIsFinded = false;//Корень не найден. Продолжаем искать дальше.
 										BoolTree.pop();
 										break;
@@ -228,7 +232,7 @@ int main(int argc, char *argv[])
 
 		if (rootIsFinded) {
 			cout << "Root is:\n ";
-			BoolInterval *finded_root = BoolTree.top()->eq->root;
+			BoolInterval *finded_root = BoolTree.top()->eq->getRoot();
 			cout << string(*finded_root);
 		} else {
 			cout << "Root is not exists!";

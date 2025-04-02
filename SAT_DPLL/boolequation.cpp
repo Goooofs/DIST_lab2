@@ -4,7 +4,7 @@
 #include <ostream>
 #include <string>
 
-BoolEquation::BoolEquation(BoolInterval **cnf, BoolInterval *root, int cnfSize, int count, BBV mask)
+BoolEquation::BoolEquation(BoolInterval **cnf, BoolInterval *root, int cnfSize, int count, BBV mask, IBranchStrat* strategy)
 {
 	this->cnf = new BoolInterval*[cnfSize];
 
@@ -17,9 +17,10 @@ BoolEquation::BoolEquation(BoolInterval **cnf, BoolInterval *root, int cnfSize, 
 	this->count = count;
 	this->mask = mask;
 
+	this->branchStrat = strategy;
 }
 
-BoolEquation::BoolEquation(BoolEquation &equation)
+BoolEquation::BoolEquation(BoolEquation &equation, IBranchStrat* strategy)
 {
 	this->cnf = new BoolInterval*[equation.cnfSize];
 
@@ -31,6 +32,12 @@ BoolEquation::BoolEquation(BoolEquation &equation)
 	this->cnfSize = equation.cnfSize;
 	this->count = equation.count;
 	this->mask = equation.mask;
+
+	if (strategy) {
+        this->branchStrat = strategy;
+    } else {
+        this->branchStrat = equation.branchStrat;
+    }
 }
 
 // Проверка правил
@@ -221,42 +228,52 @@ void BoolEquation::Simplify(int ixCol, char value)
 
 int BoolEquation::ChooseColForBranching()
 {
-	vector<int> indexes;
-	vector<int> values;
-	bool rezInit = false;
-
-	for (int i = 0; i < mask.getSize(); i++) {
-		if (mask[i] == 0) {
-			indexes.push_back(i);
-		}
-	}
-
-	for (int i = 0; i < cnfSize; i++) {
-		BoolInterval *interval = cnf[i];
-
-		if (interval != nullptr) {
-			if (!rezInit) {
-				for (int k = 0; k < indexes.size(); k++) {
-					if (interval->getValue(indexes.at(k)) == '-') {
-						values.push_back(1);
-					} else {
-						values.push_back(0);
-					}
-				}
-
-				rezInit = true;
-			} else {
-				for (int k = 0; k < indexes.size(); k++) {
-					if (interval->getValue(indexes.at(k)) == '-') {
-						//int val = values.at(k) + (interval->getValue(indexes.at(k)) - '0');
-						values.at(k)++;
-					}
-				}
-			}
-		}
-	}
-
-	int minElementIndex = std::min_element(values.begin(), values.end()) - values.begin();
-
-	return indexes.at(minElementIndex);
+    // Вместо старой логики — просто обращаемся к стратегии.
+    // Если стратегию не задали, вернём 0 (или -1, или как удобно).
+    if (!branchStrat) {
+        return 0;
+    }
+    return branchStrat->chooseColumn(*this);
 }
+
+// int BoolEquation::ChooseColForBranching()
+// {
+// 	vector<int> indexes;
+// 	vector<int> values;
+// 	bool rezInit = false;
+
+// 	for (int i = 0; i < mask.getSize(); i++) {
+// 		if (mask[i] == 0) {
+// 			indexes.push_back(i);
+// 		}
+// 	}
+
+// 	for (int i = 0; i < cnfSize; i++) {
+// 		BoolInterval *interval = cnf[i];
+
+// 		if (interval != nullptr) {
+// 			if (!rezInit) {
+// 				for (int k = 0; k < indexes.size(); k++) {
+// 					if (interval->getValue(indexes.at(k)) == '-') {
+// 						values.push_back(1);
+// 					} else {
+// 						values.push_back(0);
+// 					}
+// 				}
+
+// 				rezInit = true;
+// 			} else {
+// 				for (int k = 0; k < indexes.size(); k++) {
+// 					if (interval->getValue(indexes.at(k)) == '-') {
+// 						//int val = values.at(k) + (interval->getValue(indexes.at(k)) - '0');
+// 						values.at(k)++;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	int minElementIndex = std::min_element(values.begin(), values.end()) - values.begin();
+
+// 	return indexes.at(minElementIndex);
+// }

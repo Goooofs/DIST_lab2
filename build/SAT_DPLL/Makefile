@@ -182,6 +182,30 @@ BBV.cpp.s:
 	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build" && $(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/BBV.cpp.s
 .PHONY : BBV.cpp.s
 
+MinOccStrategy.o: MinOccStrategy.cpp.o
+.PHONY : MinOccStrategy.o
+
+# target to build an object file
+MinOccStrategy.cpp.o:
+	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build" && $(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o
+.PHONY : MinOccStrategy.cpp.o
+
+MinOccStrategy.i: MinOccStrategy.cpp.i
+.PHONY : MinOccStrategy.i
+
+# target to preprocess a source file
+MinOccStrategy.cpp.i:
+	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build" && $(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.i
+.PHONY : MinOccStrategy.cpp.i
+
+MinOccStrategy.s: MinOccStrategy.cpp.s
+.PHONY : MinOccStrategy.s
+
+# target to generate assembly for a file
+MinOccStrategy.cpp.s:
+	cd "/home/goof/TSU/Development of information security tools/DIST_lab2/build" && $(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.s
+.PHONY : MinOccStrategy.cpp.s
+
 __/allocator/Allocator.o: __/allocator/Allocator.cpp.o
 .PHONY : __/allocator/Allocator.o
 
@@ -316,6 +340,9 @@ help:
 	@echo "... BBV.o"
 	@echo "... BBV.i"
 	@echo "... BBV.s"
+	@echo "... MinOccStrategy.o"
+	@echo "... MinOccStrategy.i"
+	@echo "... MinOccStrategy.s"
 	@echo "... __/allocator/Allocator.o"
 	@echo "... __/allocator/Allocator.i"
 	@echo "... __/allocator/Allocator.s"

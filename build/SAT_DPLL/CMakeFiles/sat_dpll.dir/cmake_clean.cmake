@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "sat_dpll_autogen"
   "CMakeFiles/sat_dpll.dir/BBV.cpp.o"
   "CMakeFiles/sat_dpll.dir/BBV.cpp.o.d"
+  "CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o"
+  "CMakeFiles/sat_dpll.dir/MinOccStrategy.cpp.o.d"
   "CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o"
   "CMakeFiles/sat_dpll.dir/__/allocator/Allocator.cpp.o.d"
   "CMakeFiles/sat_dpll.dir/boolequation.cpp.o"

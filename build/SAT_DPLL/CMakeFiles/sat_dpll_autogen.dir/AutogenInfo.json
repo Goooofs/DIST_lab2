@@ -30,6 +30,12 @@
 			null
 		],
 		[
+			"/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/MinOccStrategy.h",
+			"Mu",
+			"EWIEGA46WW/moc_MinOccStrategy.cpp",
+			null
+		],
+		[
 			"/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/boolequation.h",
 			"Mu",
 			"EWIEGA46WW/moc_boolequation.cpp",
@@ -101,6 +107,11 @@
 	[
 		[
 			"/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/BBV.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/MinOccStrategy.cpp",
 			"Mu",
 			null
 		],

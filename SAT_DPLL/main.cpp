@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	// Hardcode input
 	//	filepath = "sat_ex_2.pla";
 	//filepath = "Sat_ex11_3.pla";
-	filepath = "Sat_ex30_3.pla";
+	filepath = "/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/SatExamples/Sat_ex30_3.pla";
 	QFile file(QString::fromUtf8(filepath.c_str()));
 
 	//считываем весь файл

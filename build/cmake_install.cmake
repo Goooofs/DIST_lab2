@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/goof/TSU/Development of information security tools/DIST_lab2/build/allocator/cmake_install.cmake")
   include("/home/goof/TSU/Development of information security tools/DIST_lab2/build/test_proj/cmake_install.cmake")
+  include("/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL/cmake_install.cmake")
 
 endif()
 

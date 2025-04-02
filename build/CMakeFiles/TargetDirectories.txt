@@ -7,3 +7,8 @@
 /home/goof/TSU/Development of information security tools/DIST_lab2/build/test_proj/CMakeFiles/test_proj.dir
 /home/goof/TSU/Development of information security tools/DIST_lab2/build/test_proj/CMakeFiles/edit_cache.dir
 /home/goof/TSU/Development of information security tools/DIST_lab2/build/test_proj/CMakeFiles/rebuild_cache.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL/CMakeFiles/sat_dpll.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL/CMakeFiles/edit_cache.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL/CMakeFiles/rebuild_cache.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir
+/home/goof/TSU/Development of information security tools/DIST_lab2/build/SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir

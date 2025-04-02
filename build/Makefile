@@ -155,6 +155,45 @@ test_proj/fast:
 	$(MAKE) $(MAKESILENT) -f test_proj/CMakeFiles/test_proj.dir/build.make test_proj/CMakeFiles/test_proj.dir/build
 .PHONY : test_proj/fast
 
+#=============================================================================
+# Target rules for targets named sat_dpll
+
+# Build rule for target.
+sat_dpll: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sat_dpll
+.PHONY : sat_dpll
+
+# fast build rule for target.
+sat_dpll/fast:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/build
+.PHONY : sat_dpll/fast
+
+#=============================================================================
+# Target rules for targets named sat_dpll_autogen_timestamp_deps
+
+# Build rule for target.
+sat_dpll_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sat_dpll_autogen_timestamp_deps
+.PHONY : sat_dpll_autogen_timestamp_deps
+
+# fast build rule for target.
+sat_dpll_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build
+.PHONY : sat_dpll_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named sat_dpll_autogen
+
+# Build rule for target.
+sat_dpll_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sat_dpll_autogen
+.PHONY : sat_dpll_autogen
+
+# fast build rule for target.
+sat_dpll_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build
+.PHONY : sat_dpll_autogen/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -163,8 +202,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... sat_dpll_autogen"
+	@echo "... sat_dpll_autogen_timestamp_deps"
 	@echo "... AllocatorApp"
 	@echo "... allocator"
+	@echo "... sat_dpll"
 	@echo "... test_proj"
 .PHONY : help
 

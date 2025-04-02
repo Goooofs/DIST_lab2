@@ -4,3 +4,5 @@ project(MyAllocatorTest)
 add_subdirectory(allocator)
 
 add_subdirectory(test_proj)
+
+add_subdirectory(SAT_DPLL)

@@ -65,17 +65,37 @@ CMAKE_BINARY_DIR = "/home/goof/TSU/Development of information security tools/DIS
 # The main recursive "all" target.
 all: allocator/all
 all: test_proj/all
+all: SAT_DPLL/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: allocator/preinstall
 preinstall: test_proj/preinstall
+preinstall: SAT_DPLL/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: allocator/clean
 clean: test_proj/clean
+clean: SAT_DPLL/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory SAT_DPLL
+
+# Recursive "all" directory target.
+SAT_DPLL/all: SAT_DPLL/CMakeFiles/sat_dpll.dir/all
+.PHONY : SAT_DPLL/all
+
+# Recursive "preinstall" directory target.
+SAT_DPLL/preinstall:
+.PHONY : SAT_DPLL/preinstall
+
+# Recursive "clean" directory target.
+SAT_DPLL/clean: SAT_DPLL/CMakeFiles/sat_dpll.dir/clean
+SAT_DPLL/clean: SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/clean
+SAT_DPLL/clean: SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/clean
+.PHONY : SAT_DPLL/clean
 
 #=============================================================================
 # Directory level rules for directory allocator
@@ -168,7 +188,7 @@ allocator/CMakeFiles/AllocatorApp.dir/clean:
 test_proj/CMakeFiles/test_proj.dir/all: allocator/CMakeFiles/allocator.dir/all
 	$(MAKE) $(MAKESILENT) -f test_proj/CMakeFiles/test_proj.dir/build.make test_proj/CMakeFiles/test_proj.dir/depend
 	$(MAKE) $(MAKESILENT) -f test_proj/CMakeFiles/test_proj.dir/build.make test_proj/CMakeFiles/test_proj.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" --progress-num=6,7 "Built target test_proj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" --progress-num=14,15 "Built target test_proj"
 .PHONY : test_proj/CMakeFiles/test_proj.dir/all
 
 # Build rule for subdir invocation for target.
@@ -186,6 +206,85 @@ test_proj: test_proj/CMakeFiles/test_proj.dir/rule
 test_proj/CMakeFiles/test_proj.dir/clean:
 	$(MAKE) $(MAKESILENT) -f test_proj/CMakeFiles/test_proj.dir/build.make test_proj/CMakeFiles/test_proj.dir/clean
 .PHONY : test_proj/CMakeFiles/test_proj.dir/clean
+
+#=============================================================================
+# Target rules for target SAT_DPLL/CMakeFiles/sat_dpll.dir
+
+# All Build rule for target.
+SAT_DPLL/CMakeFiles/sat_dpll.dir/all: SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/all
+SAT_DPLL/CMakeFiles/sat_dpll.dir/all: SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/depend
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" --progress-num=6,7,8,9,10,11,12 "Built target sat_dpll"
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll.dir/all
+
+# Build rule for subdir invocation for target.
+SAT_DPLL/CMakeFiles/sat_dpll.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SAT_DPLL/CMakeFiles/sat_dpll.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" 0
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll.dir/rule
+
+# Convenience name for target.
+sat_dpll: SAT_DPLL/CMakeFiles/sat_dpll.dir/rule
+.PHONY : sat_dpll
+
+# clean rule for target.
+SAT_DPLL/CMakeFiles/sat_dpll.dir/clean:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/clean
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll.dir/clean
+
+#=============================================================================
+# Target rules for target SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" --progress-num= "Built target sat_dpll_autogen_timestamp_deps"
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" 0
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+sat_dpll_autogen_timestamp_deps: SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/rule
+.PHONY : sat_dpll_autogen_timestamp_deps
+
+# clean rule for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/clean
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir
+
+# All Build rule for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/all: SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" --progress-num=13 "Built target sat_dpll_autogen"
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/goof/TSU/Development of information security tools/DIST_lab2/build/CMakeFiles" 0
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/rule
+
+# Convenience name for target.
+sat_dpll_autogen: SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/rule
+.PHONY : sat_dpll_autogen
+
+# clean rule for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/clean
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -11,8 +11,8 @@
 #include "boolequation.h"
 #include "BBV.h"
 #include "Allocator.h"
-#include "MinOccStrategy.h"
-#include "MinOccStrategy.h"
+#include "MinOccStrategy.h" // подключаю стратегию
+#include "IBranchStrat.h"
 
 
 int main(int argc, char *argv[])
@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
     Allocator allocBoolEquation(kBoolEquationSize, 100);
     Allocator allocNodeBoolTree(kNodeBoolTreeSize, 100);
     Allocator allocCNF(1024, 1);
+	Allocator allocStrategy(64, 1);
 
 	QStringList full_file_list;
 	QList<QStringList> Elements;
@@ -32,6 +33,13 @@ int main(int argc, char *argv[])
 	QStringList inputs;
 	filepath = "/home/goof/TSU/Development of information security tools/DIST_lab2/SAT_DPLL/SatExamples/Sat_ex14_3.pla";
 	QFile file(QString::fromUtf8(filepath.c_str()));
+
+	BoolInterval** CNF = nullptr;
+    int cnfSize = 0;
+    BoolInterval* root = nullptr;
+    IBranchStrat* strategy = nullptr;
+    NodeBoolTree* startNode = nullptr;
+	BoolEquation* boolequation = nullptr; 
 
 	//считываем весь файл
 	if ((file.exists()) && (file.open(QIODevice::ReadOnly))) {
@@ -44,7 +52,7 @@ int main(int argc, char *argv[])
         BoolInterval** CNF = nullptr;
         try{
             size_t requestSize = sizeof(BoolInterval*) * cnfSize;
-            std::cout << requestSize << std::endl;
+            // std::cout << requestSize << std::endl;
 
             if (requestSize > 1024) throw std::runtime_error("CNF array too large for allocator");
 
@@ -92,8 +100,6 @@ int main(int argc, char *argv[])
 		QByteArray d = rootdnc.toUtf8();
 		BBV dnc(d.data());
 
-		// Создаем пустой корень уравнения;
-        BoolInterval* root = nullptr;
         try {
             if (sizeof(BoolInterval) > kBoolIntervalSize) throw std::runtime_error("Root BoolInterval size too large for allocator");
             void* memRoot = allocBoolInterval.Allocate(sizeof(BoolInterval));
@@ -103,11 +109,11 @@ int main(int argc, char *argv[])
             return 1;
         }
 
-        BoolEquation* boolequation = nullptr;
         try {
             if (sizeof(BoolEquation) > kBoolEquationSize) throw std::runtime_error("BoolEquation size too large for allocator");
             void* mem = allocBoolEquation.Allocate(sizeof(BoolEquation));
-            IBranchStrat* strategy = new MinOccStrategy(); // добавил стратегию
+			void* memStrategy = allocStrategy.Allocate(sizeof(MinOccStrategy));
+            strategy = new (memStrategy) MinOccStrategy(); 
             boolequation = new (mem) BoolEquation(CNF, root, cnfSize, cnfSize, vec, strategy);
         } catch (const std::exception& e) {
             std::cerr << "error while allocating BoolEquation: " << e.what() << std::endl;
@@ -132,7 +138,6 @@ int main(int argc, char *argv[])
 		bool rootIsFinded = false;
 		stack<NodeBoolTree *> BoolTree;
 
-        NodeBoolTree* startNode = nullptr;
         try {
             if (sizeof(NodeBoolTree) > kNodeBoolTreeSize) throw std::runtime_error("NodeBoolTree size too large for allocator");
             void* memNode = allocNodeBoolTree.Allocate(sizeof(NodeBoolTree));
@@ -242,6 +247,48 @@ int main(int argc, char *argv[])
 		std::cout << "File does not exists.\n";
 	}
 
-	return 0;
+	if (startNode) {
+        std::stack<NodeBoolTree*> freeStack;
+        freeStack.push(startNode);
+        while (!freeStack.empty()) {
+            NodeBoolTree* node = freeStack.top();
+            freeStack.pop();
+            if (node->lt) freeStack.push(node->lt);
+            if (node->rt) freeStack.push(node->rt);
 
+            if (node->eq) {
+                node->eq->~BoolEquation();
+                allocBoolEquation.Deallocate(node->eq);
+                node->eq = nullptr;
+            }
+            node->~NodeBoolTree();
+            allocNodeBoolTree.Deallocate(node);
+        }
+    }
+
+    if (CNF) {
+        for (int i = 0; i < cnfSize; i++) {
+            if (CNF[i]) {
+                CNF[i]->~BoolInterval();
+                allocBoolInterval.Deallocate(CNF[i]);
+                CNF[i] = nullptr;
+            }
+        }
+        allocCNF.Deallocate(CNF);
+        CNF = nullptr;
+    }
+
+    if (root) {
+        root->~BoolInterval();
+        allocBoolInterval.Deallocate(root);
+        root = nullptr;
+    }
+
+    if (strategy) {
+    	strategy->~IBranchStrat();
+        allocStrategy.Deallocate(strategy);
+        strategy = nullptr;
+    }
+
+	return 0;
 }
